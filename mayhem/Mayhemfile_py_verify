@@ -1,0 +1,9 @@
+project: savantenvs/py-lmdb
+target: py_verify
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/py_verify/testsuite
+cmds:
+  - cmd: /mayhem/py_verify
+    libfuzzer: true
+    timeout: 30

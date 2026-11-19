@@ -1,0 +1,9 @@
+project: savantenvs/py-lmdb
+target: mdb09_write
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mdb09_write/testsuite
+cmds:
+  - cmd: /mayhem/mdb09_write
+    libfuzzer: true
+    timeout: 30

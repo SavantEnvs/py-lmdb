@@ -1,0 +1,9 @@
+project: savantenvs/py-lmdb
+target: py_restore
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/py_restore/testsuite
+cmds:
+  - cmd: /mayhem/py_restore
+    libfuzzer: true
+    timeout: 30
